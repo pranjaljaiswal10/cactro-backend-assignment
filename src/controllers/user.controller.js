@@ -4,7 +4,7 @@ import octokit from "../utils/config.js"
 const userDetail=async(req,res)=>{
   try {
     const {username}=req.body
-    if(username==""){
+    if(username===""){
         res.status(400).json({success:false,message:"username is required"})
     }
      const response=await octokit.users.getByUsername({
@@ -29,9 +29,6 @@ const userRepoDetail=async(req,res)=>{
         owner:username,
         repo:reponame
     })
-    if(!response.data){
-     res.status(404).json({success:false,message:"repo not found"})
-    }
     res.status(response.status).json(response.data)
   } catch (error) {
     console.error(error)
