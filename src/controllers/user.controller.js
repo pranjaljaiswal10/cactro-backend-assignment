@@ -1,4 +1,4 @@
-import octokit from "../utils/config"
+import octokit from "../utils/config.js"
 
 
 const userDetail=async(req,res)=>{
