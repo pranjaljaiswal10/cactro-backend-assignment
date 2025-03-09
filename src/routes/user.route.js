@@ -5,6 +5,6 @@ const gitRouter=Router()
 
 gitRouter.get("/",userDetail)
 gitRouter.get("/:reponame",userRepoDetail)
-gitRouter.post("/:reponame/create-issue",createIssueInRepo)
+gitRouter.post("/:reponame/issues",createIssueInRepo)
 
 export default gitRouter;
